@@ -13,8 +13,8 @@ const Contest = () => {
     <>
       <section className='pb-[30px]'>
         <Header />
-        <div>
-          <img src={banner} className='w-full h-full md:w-full md:h-[520px] md:object-cover' />
+        <div className='mt-[80px]'>
+          <img src={banner} className='w-full h-full md:w-full md:h-[400px] md:object-cover' />
         </div>
         <div>
           <div className='px-[40px] py-[30px] md:px-[80px] md:py-[50px]'>

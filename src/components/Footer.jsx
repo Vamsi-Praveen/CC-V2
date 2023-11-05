@@ -7,7 +7,7 @@ import linkedin from '../assets/logo-linkedin.svg'
 
 const Footer = () => {
     return (
-        <footer className='flex p-[20px] border-t-[1px] flex-col gap-[10px] h-[150px] items-center'>
+        <footer className='flex p-[20px] border-t-[1px] flex-col gap-[10px] h-[200px] items-center'>
             <div className='mb-[10px] md:flex md:flex-row md:items-center md:justify-around justify-center flex flex-col w-full'>
                 <div>
                     <Link to="/">

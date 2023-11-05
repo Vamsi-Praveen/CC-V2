@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Home from './components/Home'
 import Contest from './pages/Contest'
 import ErrorPage from './pages/ErrorPage'
+import Announcement from './pages/Announcement'
 
 const App = () => {
   return (
@@ -10,6 +11,7 @@ const App = () => {
       <Routes>
         <Route path='/' element={<Home/>}/>
         <Route path='/contest' element={<Contest/>}/>
+        <Route path='/annonucements' element={<Announcement/>}/>
         <Route path='*' element={<ErrorPage/>}/>
       </Routes>
     </BrowserRouter>
