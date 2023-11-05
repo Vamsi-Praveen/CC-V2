@@ -58,7 +58,7 @@ const Footer = () => {
                     </ul>
                 </div>
             </div>
-            <p className='text-slate-500 text-[10px] text-center pb-[10px]'>&copy;&nbsp;Copyright 2023 | Made with ❤ by Vamsi.</p>
+            <p className='text-slate-500 text-[10px] text-center pb-[10px]'>&copy;&nbsp;Copyright 2023 | Made with <span className='text-slate-500'>❤</span> by Vamsi.</p>
         </footer>
     )
 }
