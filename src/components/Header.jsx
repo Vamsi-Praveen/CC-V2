@@ -33,7 +33,7 @@ const Header = () => {
             >
                 {isOpen ? <img src={close} className='w-[30px] cursor-pointer' /> : <img src={menu} className='w-[30px] cursor-pointer' />}
             </motion.div>
-            <nav className={`bg-white md:relative md:top-0 absolute md:min-h-fit min-h-[40vh] left-0 md:w-auto w-full shadow-xl md:shadow-none flex items-center justify-center border-t-[1px] border-black-50 md:border-none -z-50 transition-all ease-in ${isOpen ? 'top-[80px]' : 'top-[-400px]'}`}>
+            <nav className={`bg-white md:relative md:top-0 absolute md:min-h-fit min-h-[250px] left-0 md:w-auto w-full shadow-xl md:shadow-none flex items-center justify-center border-t-[1px] border-black-50 md:border-none -z-50 transition-all ease-in ${isOpen ? 'top-[80px]' : 'top-[-400px]'}`}>
                 <ul className='flex md:flex-row flex-col items-center justify-center md:gap-[20px] gap-[25px]'>
                     <motion.li
                         initial={{ y: 50, opacity: 0 }}
