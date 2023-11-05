@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 import Header from '../components/Header.jsx'
 import banner from '../assets/banner1.jpg';
@@ -11,6 +11,24 @@ import SearchInput from '../components/SearchInput.jsx';
 import Button from '../components/Button.jsx';
 
 const Register = () => {
+  const [data, setData] = useState({
+    name: '',
+    rollno: '',
+    branch: '',
+    year: '',
+    hackerrank: ''
+  })
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setData((prev) => ({
+      ...prev,
+      [name]: value
+    }))
+  }
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(data);
+  }
   return (
     <>
       <section className='pb-[30px]'>
@@ -53,13 +71,13 @@ const Register = () => {
             </div>
             <div className='w-full h-[500px] p-[20px]'>
               <h1 className='text-xl md:text-4xl font-bold text-center text-black px-[20px]'>Register Now for the Event</h1>
-              <form className='mt-[40px] flex items-center justify-center w-full flex-col gap-[20px]'>
-                <SearchInput type={"text"} placeholder={"Name"} />
-                <SearchInput type={"text"} placeholder={"Roll No."} />
-                <SearchInput type={"text"} placeholder={"Hackerank Profile Name"} />
-                <SearchInput type={"text"} placeholder={"Branch"} />
-                <SearchInput type={"text"} placeholder={"Year"} />
-                <Button text={"Register Now"} />
+              <form onSubmit={handleSubmit} className='mt-[40px] flex items-center justify-center w-full flex-col gap-[20px]'>
+                <SearchInput type={"text"} placeholder={"Name"} value={data.name} onChange={handleChange} name={"name"} />
+                <SearchInput type={"text"} placeholder={"Roll No."} value={data.rollno} onChange={handleChange} name={"rollno"} />
+                <SearchInput type={"text"} placeholder={"Hackerank Profile Name"} value={data.hackerrank} onChange={handleChange} name={"hackerrank"} />
+                <SearchInput type={"text"} placeholder={"Branch"} value={data.branch} onChange={handleChange} name={"branch"} />
+                <SearchInput type={"text"} placeholder={"Year"} value={data.year} onChange={handleChange} name={"year"} />
+                <Button text={"Register Now"} type={"submit"}/>
               </form>
             </div>
           </div>

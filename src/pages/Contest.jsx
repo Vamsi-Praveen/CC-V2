@@ -46,7 +46,7 @@ const Contest = () => {
                 </div>
               </div>
               <div className='flex mt-[10px] md:gap-[20px] md:items-center'>
-                <Avatar/>
+                <Avatar />
               </div>
             </div>
             <div className='relative'>
@@ -54,9 +54,9 @@ const Contest = () => {
               <div className='absolute left-[6rem] top-10 mb-[20px] '>
                 <img src={line} className='w-[100px] ' />
               </div>
-              <div className='flex mt-[10px] md:gap-[20px] md:items-center'>
-                <Avatar type={"Winner"}/>
-                <Avatar type={"Runner"}/>
+              <div className='flex mt-[10px] md:gap-[20px] md:items-center md:flex-row flex-col'>
+                <Avatar type={"Winner"} />
+                <Avatar type={"Runner"} />
               </div>
             </div>
           </div>
