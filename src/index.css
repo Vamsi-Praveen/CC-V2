@@ -7,3 +7,11 @@
 {
     font-family: 'DM Sans',sans-serif;
 }
+
+.active
+{
+    @apply relative
+}
+.active::after{
+    @apply content-[''] absolute h-[8px] w-[8px] bg-slate-300 bottom-[-10px] left-1/2 translate-x-[-50%] rounded-full transition-all animate-bounce
+}

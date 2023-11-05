@@ -15,7 +15,7 @@ const About = () => {
             <div className='md:px-[120px]'>
                 <div className='md:flex items-center gap-[60px]'>
                     <motion.div className='md:w-1/2 w-full'
-                        initial={{ opacity: 0, x: -100 }}
+                        initial={{ opacity: 0, x: -10 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={
                             {
@@ -27,8 +27,8 @@ const About = () => {
                         <img src={about} alt='About' className='w-full h-[200px] md:h-[300px] md:rounded-[33px] object-cover' />
                     </motion.div>
                     <motion.div className='md:w-1/2 w-full md:p-0 p-[20px]'  
-                        initial={{ opacity: 0, x: 100 }}
-                        whileInView={{ opacity: 1, x: 0 }}
+                        initial={{ opacity: 0, y: 10 }}
+                        whileInView={{ opacity: 1, y: 0 }}
                         transition={
                             {
                                 delay: 0.2,
@@ -46,7 +46,7 @@ const About = () => {
                         initial={
                             {
                                 opacity: 0,
-                                x: -100
+                                x: -10
                             }
                         }
                         whileInView={
@@ -68,13 +68,13 @@ const About = () => {
                         initial={
                             {
                                 opacity: 0,
-                                x: 100
+                                y: -10
                             }
                         }
                         whileInView={
                             {
                                 opacity: 1,
-                                x: 0
+                                y: 0
                             }
                         }
                         transition={

@@ -12,14 +12,14 @@ const Benifits = () => {
     return (
         <section className='py-[80px] bg-slate-50/5'>
             <h1 className='text-[20px] md:text-[40px] text-black font-bold text-center relative'>Benifits of Learning to Code</h1>
-            <div className='absolute right-[0px] md:right-[22rem] mb-[20px] '>
+            <div className='absolute right-[10px] md:right-[22rem] mb-[20px] '>
                 <img src={line} className='w-[100px] md:w-[200px] ' />
             </div>
             <div className='flex items-center flex-col gap-[60px] mt-[50px]'>
                 <motion.div className='flex gap-[50px] flex-wrap justify-center'
                     initial={{
                         opacity: 0,
-                        x: -200
+                        x: -5
                     }}
                     whileInView={
                         {
@@ -41,12 +41,13 @@ const Benifits = () => {
                 <motion.div className='flex gap-[50px] flex-wrap justify-center'
                     initial={{
                         opacity: 0,
-                        x: 200
+                        y:-100
+                        
                     }}
                     whileInView={
                         {
                             opacity: 1,
-                            x: 0
+                            y: 0
                         }
                     }
                     transition={
