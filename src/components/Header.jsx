@@ -1,60 +1,74 @@
 import React from 'react'
 import logo from '../assets/logo.svg'
-import { Link } from 'react-router-dom'
+import { NavLink, Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
+import { useState } from 'react'
+import menu from '../assets/Menu.svg'
+import close from '../assets/Cancel.svg'
 
 const Header = () => {
+    const [isOpen, setOpen] = useState(false);
+    const handleClick = () => {
+        setOpen(!isOpen)
+    }
     return (
-        <motion.header className='bg-white shadow-md flex h-[80px] items-center justify-between px-[30px] fixed top-0 left-0 z-10 w-full'
+        <motion.header className='bg-white shadow-md flex h-[80px] items-center justify-between px-[30px] fixed top-0 left-0 z-[99] w-full '
             initial={{ y: -100, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.1 }}
         >
             <Link to='/'>
                 <motion.div
-                    initial={{x:-50,opacity:0}}
-                    animate={{x:0,opacity:1}}
-                    transition={{type:'spring',delay:0.35}}
+                    initial={{ x: -50, opacity: 0 }}
+                    animate={{ x: 0, opacity: 1 }}
+                    transition={{ type: 'spring', delay: 0.35 }}
                 >
-                <img src={logo} alt='Code Carnival'/>
+                    <img src={logo} alt='Code Carnival' />
                 </motion.div>
             </Link>
-            <nav>
-                <ul className='flex items-center justify-center gap-[20px]'>
+            <motion.div onClick={handleClick} className='flex items-center mt-[4px] md:hidden'
+                initial={{ y: 50, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ delay: 0.4 }}
+            >
+                {isOpen ? <img src={close} className='w-[30px] cursor-pointer' /> : <img src={menu} className='w-[30px] cursor-pointer' />}
+            </motion.div>
+            <nav className={`bg-white md:relative md:top-0 absolute md:min-h-fit min-h-[40vh] left-0 md:w-auto w-full shadow-xl md:shadow-none flex items-center justify-center border-t-[1px] border-black-50 md:border-none -z-50 transition-all ease-in ${isOpen ? 'top-[80px]' : 'top-[-400px]'}`}>
+                <ul className='flex md:flex-row flex-col items-center justify-center md:gap-[20px] gap-[25px]'>
                     <motion.li
                         initial={{ y: 50, opacity: 0 }}
                         animate={{ y: 0, opacity: 1 }}
                         transition={{ delay: 0.4 }}
                     >
-                        <Link to='/about'>
+                        <NavLink to='/about'>
                             About
-                        </Link>
+                        </NavLink>
                     </motion.li>
                     <motion.li
                         initial={{ y: 50, opacity: 0 }}
                         animate={{ y: 0, opacity: 1 }}
                         transition={{ delay: 0.45 }}
                     >
-                        <Link to='/contest'>
+                        <NavLink to='/contest'>
                             Contests
-                        </Link>
+                        </NavLink>
                     </motion.li>
                     <motion.li
                         initial={{ y: 50, opacity: 0 }}
                         animate={{ y: 0, opacity: 1 }}
                         transition={{ delay: 0.5 }}>
-                        <Link to='/gallery'>
+                        <NavLink to='/gallery'>
                             Gallery
-                        </Link>
+                        </NavLink>
                     </motion.li>
                     <motion.li
                         initial={{ y: 50, opacity: 0 }}
                         animate={{ y: 0, opacity: 1 }}
                         transition={{ delay: 0.55 }}
                     >
-                        <Link to='/annonucements'>
+                        <NavLink to='/annonucements'>
                             Annonucements
-                        </Link>
+                        </NavLink>
                     </motion.li>
 
                 </ul>
