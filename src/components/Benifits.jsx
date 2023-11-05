@@ -15,7 +15,7 @@ const Benifits = () => {
             <div className='absolute right-[10px] md:right-[22rem] mb-[20px] '>
                 <img src={line} className='w-[100px] md:w-[200px] ' />
             </div>
-            <div className='flex items-center flex-col gap-[60px] mt-[50px]'>
+            <div className='flex items-center flex-col gap-[60px] mt-[50px] md:px-0 px-[25px]'>
                 <motion.div className='flex gap-[50px] flex-wrap justify-center'
                     initial={{
                         opacity: 0,
@@ -38,7 +38,7 @@ const Benifits = () => {
                     <BenifitCard img={b2} text={"It can enhance problem-solving skills."} />
                     <BenifitCard img={b3} text={"Coding can be applied to data visualisation."} />
                 </motion.div>
-                <motion.div className='flex gap-[50px] flex-wrap justify-center'
+                <motion.div className='flex gap-[50px] flex-wrap justify-center md:px-0 px-[20px]'
                     initial={{
                         opacity: 0,
                         y:-100
