@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { motion } from 'framer-motion'
 import Header from '../components/Header.jsx'
 import banner from '../assets/banner1.jpg';
@@ -7,8 +7,12 @@ import location from '../assets/location.svg'
 import Avatar from '../components/Avatar.jsx';
 import line from '../assets/line.svg'
 import Footer from '../components/Footer.jsx'
+import { ButtonContext } from '../context/Context.js';
+import { useButtonContext } from '../context/ButtonContext.jsx';
 
 const Contest = () => {
+  const {type,text} = useButtonContext()
+  console.log(type,text)
   return (
     <>
       <section className='pb-[30px]'>

@@ -17,7 +17,7 @@ const Card = () => {
                         04/11/2023
                     </p>
                 </div>
-                <Button text={"Register Now"} action={"register"}/>
+                <Button/>
             </div>
         </div>
     )

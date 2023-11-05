@@ -3,8 +3,10 @@ import { motion } from 'framer-motion'
 import banner from '../assets/hero-banner.jpg'
 import Card from './Card'
 import Button from './Button'
+import { useButtonContext } from '../context/ButtonContext'
 
 const Hero = () => {
+    const {setText} = useButtonContext();
     return (
         <motion.section className='w-full bg-slate-50/10 flex items-center justify-center flex-col pb-[30px] mt-[80px]'
             initial={{ opacity: 0 }}
@@ -21,8 +23,8 @@ const Hero = () => {
             <div className='mt-[20px] flex flex-col items-center gap-[40px] pt-[30px]'>
                 <h1 className='text-2xl md:text-4xl font-bold text-black'>UpComing Contests</h1>
                 <motion.div
-                    initial={{ opacity: 0, y: -50}}
-                    whileInView={{ opacity: 1, y: 0}}
+                    initial={{ opacity: 0, y: -50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
                     transition={
                         {
                             delay: 0.2,
@@ -31,14 +33,14 @@ const Hero = () => {
                         }
                     }
                 >
-                    <Card action="register"/>
+                    <Card />
                 </motion.div>
                 <h1 className='text-2xl md:text-4xl font-bold text-black pt-[20px]'>Past Contests</h1>
                 <div className='flex gap-[20px] flex-col items-center'>
                     <div className='flex gap-[15px] md:gap-[60px] flex-col md:flex-row'>
                         <motion.div
                             initial={{ opacity: 0, x: -50 }}
-                            whileInView={{ opacity: 1, x: 0}}
+                            whileInView={{ opacity: 1, x: 0 }}
                             transition={
                                 {
                                     delay: 0.4,
@@ -50,7 +52,7 @@ const Hero = () => {
                         </motion.div>
                         <motion.div
                             initial={{ opacity: 0, x: -50 }}
-                            whileInView={{ opacity: 1, x: 0}}
+                            whileInView={{ opacity: 1, x: 0 }}
                             transition={
                                 {
                                     delay: 0.4,
@@ -62,7 +64,7 @@ const Hero = () => {
                         </motion.div>
                         <motion.div
                             initial={{ opacity: 0, x: -50 }}
-                            whileInView={{ opacity: 1, x: 0}}
+                            whileInView={{ opacity: 1, x: 0 }}
                             transition={
                                 {
                                     delay: 0.4,
@@ -75,7 +77,7 @@ const Hero = () => {
 
 
                     </div>
-                    <Button text={"Load More"} />
+                    <Button />
                 </div>
 
             </div>
