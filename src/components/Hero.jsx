@@ -31,7 +31,7 @@ const Hero = () => {
                         }
                     }
                 >
-                    <Card />
+                    <Card action="register"/>
                 </motion.div>
                 <h1 className='text-2xl md:text-4xl font-bold text-black pt-[20px]'>Past Contests</h1>
                 <div className='flex gap-[20px] flex-col items-center'>

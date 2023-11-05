@@ -7,8 +7,10 @@ import location from '../assets/location.svg'
 import Avatar from '../components/Avatar.jsx';
 import line from '../assets/line.svg'
 import Footer from '../components/Footer.jsx'
+import SearchInput from '../components/SearchInput.jsx';
+import Button from '../components/Button.jsx';
 
-const Contest = () => {
+const Register = () => {
   return (
     <>
       <section className='pb-[30px]'>
@@ -46,18 +48,19 @@ const Contest = () => {
                 </div>
               </div>
               <div className='flex mt-[10px] md:gap-[20px] md:items-center'>
-                <Avatar/>
+                <Avatar />
               </div>
             </div>
-            <div className='relative'>
-              <h1 className='text-[28px] font-Poppins text-black font-bold mt-[25px] md:mb-[40px]'>Event Details</h1>
-              <div className='absolute left-[6rem] top-10 mb-[20px] '>
-                <img src={line} className='w-[100px] ' />
-              </div>
-              <div className='flex mt-[10px] md:gap-[20px] md:items-center'>
-                <Avatar type={"Winner"}/>
-                <Avatar type={"Runner"}/>
-              </div>
+            <div className='w-full h-[500px] p-[20px]'>
+              <h1 className='text-xl md:text-4xl font-bold text-center text-black px-[20px]'>Register Now for the Event</h1>
+              <form className='mt-[40px] flex items-center justify-center w-full flex-col gap-[20px]'>
+                <SearchInput type={"text"} placeholder={"Name"} />
+                <SearchInput type={"text"} placeholder={"Roll No."} />
+                <SearchInput type={"text"} placeholder={"Hackerank Profile Name"} />
+                <SearchInput type={"text"} placeholder={"Branch"} />
+                <SearchInput type={"text"} placeholder={"Year"} />
+                <Button text={"Register Now"} />
+              </form>
             </div>
           </div>
         </div>
@@ -67,4 +70,4 @@ const Contest = () => {
   )
 }
 
-export default Contest
+export default Register
